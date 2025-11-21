@@ -11,5 +11,5 @@ message GetAuthInput {
 }
 
 message GetAuthOutput {
-  required int64 userId = 1;
+  required uint64 userId = 1;
 }

@@ -83,7 +83,7 @@ func (x *GetAuthInput) GetAccessToken() string {
 
 type GetAuthOutput struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	UserId        *int64                 `protobuf:"varint,1,req,name=userId" json:"userId,omitempty"`
+	UserId        *uint64                `protobuf:"varint,1,req,name=userId" json:"userId,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -118,7 +118,7 @@ func (*GetAuthOutput) Descriptor() ([]byte, []int) {
 	return file_auth_auth_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *GetAuthOutput) GetUserId() int64 {
+func (x *GetAuthOutput) GetUserId() uint64 {
 	if x != nil && x.UserId != nil {
 		return *x.UserId
 	}
@@ -135,7 +135,7 @@ const file_auth_auth_proto_rawDesc = "" +
 	"\ttokenType\x18\x02 \x02(\tR\ttokenType\x12 \n" +
 	"\vaccessToken\x18\x03 \x02(\tR\vaccessToken\"'\n" +
 	"\rGetAuthOutput\x12\x16\n" +
-	"\x06userId\x18\x01 \x02(\x03R\x06userId22\n" +
+	"\x06userId\x18\x01 \x02(\x04R\x06userId22\n" +
 	"\x04Auth\x12*\n" +
 	"\aGetAuth\x12\r.GetAuthInput\x1a\x0e.GetAuthOutput\"\x00B,Z*github.com/NavaRose/lechuoi-protos/auth/pb"
 
