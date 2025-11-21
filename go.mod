@@ -1,3 +1,3 @@
-module github.com/NavaRose/lechuoi-protos
+module github.com/NavaRose/lechuoi-proto
 
 go 1.25.1
