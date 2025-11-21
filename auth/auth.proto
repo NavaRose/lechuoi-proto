@@ -1,0 +1,15 @@
+option go_package = "github.com/NavaRose/lechuoi-protos/auth/pb";
+
+service Auth {
+  rpc GetAuth (GetAuthInput) returns (GetAuthOutput) {}
+}
+
+message GetAuthInput {
+  required string deviceId = 1;
+  required string tokenType = 2;
+  required string accessToken = 3;
+}
+
+message GetAuthOutput {
+  required int64 userId = 1;
+}
