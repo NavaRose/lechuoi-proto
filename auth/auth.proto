@@ -12,4 +12,7 @@ message GetAuthInput {
 
 message GetAuthOutput {
   required uint64 userId = 1;
+  required string firstName = 2;
+  required string lastName = 3;
+  required string avatar = 4;
 }
