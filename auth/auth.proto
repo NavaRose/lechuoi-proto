@@ -15,4 +15,5 @@ message GetAuthOutput {
   required string firstName = 2;
   required string lastName = 3;
   required string avatar = 4;
+  required string tokenId = 5;
 }

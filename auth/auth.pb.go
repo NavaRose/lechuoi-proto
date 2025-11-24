@@ -87,6 +87,7 @@ type GetAuthOutput struct {
 	FirstName     *string                `protobuf:"bytes,2,req,name=firstName" json:"firstName,omitempty"`
 	LastName      *string                `protobuf:"bytes,3,req,name=lastName" json:"lastName,omitempty"`
 	Avatar        *string                `protobuf:"bytes,4,req,name=avatar" json:"avatar,omitempty"`
+	TokenId       *string                `protobuf:"bytes,5,req,name=tokenId" json:"tokenId,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -149,6 +150,13 @@ func (x *GetAuthOutput) GetAvatar() string {
 	return ""
 }
 
+func (x *GetAuthOutput) GetTokenId() string {
+	if x != nil && x.TokenId != nil {
+		return *x.TokenId
+	}
+	return ""
+}
+
 var File_auth_auth_proto protoreflect.FileDescriptor
 
 const file_auth_auth_proto_rawDesc = "" +
@@ -157,12 +165,13 @@ const file_auth_auth_proto_rawDesc = "" +
 	"\fGetAuthInput\x12\x1a\n" +
 	"\bdeviceId\x18\x01 \x02(\tR\bdeviceId\x12\x1c\n" +
 	"\ttokenType\x18\x02 \x02(\tR\ttokenType\x12 \n" +
-	"\vaccessToken\x18\x03 \x02(\tR\vaccessToken\"y\n" +
+	"\vaccessToken\x18\x03 \x02(\tR\vaccessToken\"\x93\x01\n" +
 	"\rGetAuthOutput\x12\x16\n" +
 	"\x06userId\x18\x01 \x02(\x04R\x06userId\x12\x1c\n" +
 	"\tfirstName\x18\x02 \x02(\tR\tfirstName\x12\x1a\n" +
 	"\blastName\x18\x03 \x02(\tR\blastName\x12\x16\n" +
-	"\x06avatar\x18\x04 \x02(\tR\x06avatar22\n" +
+	"\x06avatar\x18\x04 \x02(\tR\x06avatar\x12\x18\n" +
+	"\atokenId\x18\x05 \x02(\tR\atokenId22\n" +
 	"\x04Auth\x12*\n" +
 	"\aGetAuth\x12\r.GetAuthInput\x1a\x0e.GetAuthOutput\"\x00B,Z*github.com/NavaRose/lechuoi-protos/auth/pb"
 
